@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="public/html/help.css">
+    </head>
+    <body>
+        <table action="/" method="GET">
+            <tr>
+                <th>Request</th>
+                <th>Input</th>
+                <th>Output</th>
+                <th>Errors</th>
+                <th>Requirements</th>
+            </tr>
+            <tr>
+                <td>GET /Users</td>
+                <td>UserID</td>
+                <td>List of current users and their properties</td>
+                <td>None</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>POST /Users</td>
+                <td>UserId, First Name, Last Name, Email Address, Password</td>
+                <td>User Information, 201 status</td>
+                <td>UserID already exists</td>
+                <td>UserId cannot match a UserID already in the system</td>
+            </tr>
+            <tr>
+                <td>GET /Users/{userId}</td>
+                <td>UserId</td>
+                <td>UserId Properties</td>
+                <td>404, User Not Found</td>
+                <td>User must already exist</td>
+            </tr>
+            <tr>
+                <td>PATCH /Users/{userId}</td>
+                <td>UserId</td>
+                <td>Updated User Properties</td>
+                <td>404, User Not Found</td>
+                <td>User must already exist</td>
+            </tr>
+            <tr>
+                <td>DELETE /User/{Id}</td>
+                <td>User Id</td>
+                <td>User Deleted</td>
+                <td>404, User Not Found</td>
+                <td>User must exist</td>
+            </tr>
+        </table>
+    </body>
+</html>
